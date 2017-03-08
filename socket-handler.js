@@ -4,7 +4,7 @@ var parties = {};
 
 var users = {};
 
-var socketHandler = function(socket, io, users) {
+var socketHandler = function(socket, io) {
 
 	socket.on('create party', function(characterId) {
 		db.getCharacter(characterId).then(function(character) {
